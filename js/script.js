@@ -45,6 +45,7 @@ let pokemonRepository = (function () {
     addListItem: addListItem,
     add: add,
     getAll: getAll,
+    showDetails: showDetails,
   };
 })();
 pokemonRepository.getAll().forEach((pokemon) => {
