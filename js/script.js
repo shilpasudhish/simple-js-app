@@ -24,22 +24,29 @@ let pokemonRepository = (function () {
   function getAll() {
     return pokemonList;
   }
+
+  function addListItem(pokemon) {
+    let pokemonlist = document.querySelector(".pokemon-list");
+    let listpokemon = document.createElement("li");
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("pok-button");
+    listpokemon.appendChild(button);
+    pokemonlist.appendChild(listpokemon);
+    button.addEventListener("click", function () {
+      showDetails(pokemon);
+    });
+  }
+
+  function showDetails(pokemon) {
+    console.log(pokemon);
+  }
   return {
+    addListItem: addListItem,
     add: add,
     getAll: getAll,
   };
 })();
-
 pokemonRepository.getAll().forEach((pokemon) => {
-  pokemon.height > 1.5
-    ? document.write(
-        "<p>" +
-          pokemon.name +
-          " (height:" +
-          pokemon.height +
-          ") - Wow, that’s big!</p>"
-      )
-    : document.write(
-        "<p>" + pokemon.name + " (height:" + pokemon.height + ")</p>"
-      );
+  pokemonRepository.addListItem(pokemon);
 });
