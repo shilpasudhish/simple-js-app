@@ -74,7 +74,7 @@ let pokemonRepository = (function () {
 
     let button = document.createElement("button");
     button.innerText = pokemon.name;
-    button.classList.add("btn", "btn-primary", "btn-sm");
+    button.classList.add("btn", "btn-light");
     button.setAttribute("data-toggle", "modal");
     button.setAttribute("data-target", "#pokemonModal");
 

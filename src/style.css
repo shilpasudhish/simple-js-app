@@ -1,7 +1,60 @@
+/* General Styles */
 body {
+	background-color: #f8f9fa;
 	font-family: Arial, sans-serif;
-	background-color: lightgoldenrodyellow;
-	color: blue;
-	margin: 0;
-	padding: 20px;
-}
+  }
+  
+  h1 {
+	font-weight: 700;
+	color: #333;
+  }
+  
+  /* Pokémon List Styles */
+  #pokemon-list {
+	max-width: 600px;
+	margin: 0 auto;
+  }
+  
+  #pokemon-list .list-group-item {
+	transition: background-color 0.3s ease;
+  }
+  
+  #pokemon-list .list-group-item:hover {
+	background-color: #e9ecef;
+  }
+  
+  /* Button Styles */
+  .btn-light {
+	color: #333;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	width: 100%;
+	transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-light:hover {
+	background-color: #333;
+	color: #fff;
+  }
+  
+  /* Modal Styles */
+  .modal-body img {
+	max-width: 100px;
+	margin-bottom: 10px;
+  }
+  
+  .modal-body p {
+	font-size: 1.1em;
+	color: #555;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 576px) {
+	h1 {
+	  font-size: 1.5em;
+	}
+	.btn-light {
+	  font-size: 0.9em;
+	}
+  }
+  
